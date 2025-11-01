@@ -90,7 +90,7 @@ const resolvers = {
     },
 
     async breeds() {
-      // The Cat API /breeds devuelve mucha info; aquí devolvemos {id, name}
+      // The Cat API 
       const data = await fetchTheCatAPI("/breeds");
       return (Array.isArray(data) ? data : []).map(b => ({ id: b.id, name: b.name }));
     },
